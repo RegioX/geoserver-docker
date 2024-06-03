@@ -1,0 +1,21 @@
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: regiox.azurecr.io
+          username: ${{ secrets.acr_regiox_username }}
+          password: ${{ secrets.acr_regiox_password }}
+
+      - name: Build and push image to ACR
+        id: build-image
+        run: |
+          docker build -f  ".docker/Dockerfile" -t regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} .
+          docker push regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
+          docker tag regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:latest
+          docker push regiox.azurecr.io/regiox/rx/geoserver-docker:latest
