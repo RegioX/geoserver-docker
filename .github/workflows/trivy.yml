@@ -11,42 +11,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Build image
-        run: docker build -t geoserver-docker.osgeo.org/geoserver:${{ github.sha }} .
-      - name: Run trivy
-        uses: aquasecurity/trivy-action@master
-        with:
-          format: "sarif"
-          ignore-unfixed: true
-          image-ref: "geoserver-docker.osgeo.org/geoserver:${{ github.sha }}"
-          output: "trivy-results.sarif"
-          severity: "CRITICAL,HIGH"
-          vuln-type: "os,library"
-      - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: "trivy-results.sarif"
+        run: docker build -t regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} .
+      # - name: Run trivy
+      #   uses: aquasecurity/trivy-action@master
+      #   with:
+      #     format: "sarif"
+      #     ignore-unfixed: true
+      #     image-ref: "geoserver-docker.osgeo.org/geoserver:${{ github.sha }}"
+      #     output: "trivy-results.sarif"
+      #     severity: "CRITICAL,HIGH"
+      #     vuln-type: "os,library"
+      # - name: Upload Trivy scan results to GitHub Security tab
+      #   uses: github/codeql-action/upload-sarif@v2
+      #   with:
+      #     sarif_file: "trivy-results.sarif"
 
-      - uses: azure/docker-login@v1
-        with:
-          login-server: regiox.azurecr.io
-          username: ${{ secrets.acr_regiox_username }}
-          password: ${{ secrets.acr_regiox_password }}
+      # - uses: azure/docker-login@v1
+      #   with:
+      #     login-server: regiox.azurecr.io
+      #     username: ${{ secrets.acr_regiox_username }}
+      #     password: ${{ secrets.acr_regiox_password }}
 
       - name: Push image to ACR
         run: |
-          docker tag geoserver-docker.osgeo.org/geoserver:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
           docker push regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
-          docker tag geoserver-docker.osgeo.org/geoserver:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:latest
+          docker tag regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:latest
           docker push regiox.azurecr.io/regiox/rx/geoserver-docker:latest
 
-      - name: Push image to ACR
-        uses: azure/k8s-set-context@v1
-        with:
-          kubeconfig: ${{ secrets.aks_regioxcluster1_kubeConfig }}
-      - uses: azure/k8s-deploy@v1.2
-        with:
-          namespace: ingress-basic
-          images: |
-            regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
-          imagepullsecrets: |
-            regioxclustedockerauth
+      # - name: Push image to ACR
+      #   uses: azure/k8s-set-context@v1
+      #   with:
+      #     kubeconfig: ${{ secrets.aks_regioxcluster1_kubeConfig }}
+      # - uses: azure/k8s-deploy@v1.2
+      #   with:
+      #     namespace: ingress-basic
+      #     images: |
+      #       regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
+      #     imagepullsecrets: |
+      #       regioxclustedockerauth
