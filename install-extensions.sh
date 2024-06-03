@@ -29,7 +29,7 @@ if [ "$INSTALL_EXTENSIONS" = "true" ]; then
     download_extension ${URL} ${EXTENSION}
   done
   for EXTENSION in $(echo "${COMMUNITY_EXTENSIONS}" | tr ',' ' '); do
-    URL="${COMMUNITY_PLUGIN_URL}-plugin.zip"
+    URL="${COMMUNITY_PLUGIN_URL}-${EXTENSION}-plugin.zip"
     download_extension ${URL} ${EXTENSION}
   done
   echo "Finished download of extensions"
