@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@master
       - name: Build image
         run: docker build -t geoserver-docker.osgeo.org/geoserver:${{ github.sha }} .
       - name: Run trivy
@@ -25,3 +25,16 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: regiox.azurecr.io
+          username: ${{ secrets.acr_regiox_username }}
+          password: ${{ secrets.acr_regiox_password }}
+  
+      - name: Push image to ACR
+        run: |
+          docker tag geoserver-docker.osgeo.org/geoserver:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
+          docker push regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
+          docker tag geoserver-docker.osgeo.org/geoserver:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:latest
+          docker push regiox.azurecr.io/regiox/rx/geoserver-docker:latest
