@@ -144,9 +144,6 @@ RUN cd $CATALINA_HOME/lib \
 
 # copy scripts
 COPY *.sh /opt/
-# copy scripts
-COPY /opt/config/global.xml /opt/geoserver_data/global.xml
-COPY /opt/config/web.xml /opt/apache-tomcat-9.0.89/webapps/geoserver/WEB-INF/web.xml
 
 # CIS Docker benchmark: Remove setuid and setgid permissions in the images to prevent privilege escalation attacks within containers.
 RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
@@ -154,6 +151,10 @@ RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
 # GeoServer user => restrict access to $CATALINA_HOME and GeoServer directories
 # See also CIS Docker benchmark and docker best practices
 RUN chmod +x /opt/*.sh
+
+# copy scripts
+COPY /opt/config/global.xml /opt/geoserver_data/global.xml
+COPY /opt/config/web.xml /opt/apache-tomcat-9.0.89/webapps/geoserver/WEB-INF/web.xml
 
 ENTRYPOINT ["/opt/startup.sh"]
 
