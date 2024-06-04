@@ -144,6 +144,8 @@ RUN cd $CATALINA_HOME/lib \
 
 # copy scripts
 COPY *.sh /opt/
+# copy scripts
+COPY config/global.xml /opt/geoserver_data/global.xml
 
 # CIS Docker benchmark: Remove setuid and setgid permissions in the images to prevent privilege escalation attacks within containers.
 RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
