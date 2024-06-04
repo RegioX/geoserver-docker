@@ -153,7 +153,7 @@ RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
 RUN chmod +x /opt/*.sh
 
 # copy scripts
-COPY /opt/config/global.xml /opt/geoserver_data/global.xml
+# COPY /opt/config/global.xml /opt/geoserver_data/global.xml
 # COPY /opt/config/web.xml /opt/apache-tomcat-9.0.89/webapps/geoserver/WEB-INF/web.xml
 
 ENTRYPOINT ["/opt/startup.sh"]
