@@ -39,10 +39,10 @@
              UserDatabaseRealm to authenticate users
         -->
         <Resource name="UserDatabase" auth="Container"
-                  type="org.apache.catalina.UserDatabase"
-                  description="User database that can be updated and saved"
-                  factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
-                  pathname="conf/tomcat-users.xml" />
+            type="org.apache.catalina.UserDatabase"
+            description="User database that can be updated and saved"
+            factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+            pathname="conf/tomcat-users.xml" />
     </GlobalNamingResources>
 
     <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -52,7 +52,8 @@
      -->
     <Service name="Catalina">
 
-        <!--The connectors can use a shared executor, you can define one or more named thread pools-->
+        <!--The
+        connectors can use a shared executor, you can define one or more named thread pools-->
         <!--
         <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"
             maxThreads="150" minSpareThreads="4"/>
@@ -147,7 +148,8 @@
         -->
         <Engine name="Catalina" defaultHost="localhost">
 
-            <!--For clustering, please take a look at documentation at:
+            <!--For
+            clustering, please take a look at documentation at:
                 /docs/cluster-howto.html  (simple how to)
                 /docs/config/cluster.html (reference documentation) -->
             <!--
@@ -162,24 +164,25 @@
                      that are performed against this UserDatabase are immediately
                      available for use by the Realm.  -->
                 <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
-                       resourceName="UserDatabase"/>
+                    resourceName="UserDatabase" />
             </Realm>
 
-            <Host name="localhost"  appBase="webapps"
-                  unpackWARs="true" autoDeploy="true">
+            <Host name="localhost" appBase="webapps"
+                unpackWARs="true" autoDeploy="true">
 
                 <!-- SingleSignOn valve, share authentication between web applications
                      Documentation at: /docs/config/valve.html -->
                 <!--
                 <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
                 -->
-
+                <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false"
+                    showServerInfo="false" />
                 <!-- Access log processes all example.
                      Documentation at: /docs/config/valve.html
                      Note: The pattern used is equivalent to using pattern="common" -->
                 <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-                       prefix="localhost_access_log" suffix=".txt"
-                       pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+                    prefix="localhost_access_log" suffix=".txt"
+                    pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
             </Host>
         </Engine>

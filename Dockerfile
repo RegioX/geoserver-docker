@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as tomcat
+FROM ubuntu:24.04 as tomcat
 
 ARG TOMCAT_VERSION=9.0.89
 ARG CORS_ENABLED=false
@@ -10,7 +10,7 @@ ARG CORS_ALLOW_CREDENTIALS=false
 # Environment variables
 ENV TOMCAT_VERSION=$TOMCAT_VERSION
 ENV CATALINA_HOME=/opt/apache-tomcat-${TOMCAT_VERSION}
-ENV EXTRA_JAVA_OPTS="-Xms256m -Xmx1g"
+ENV EXTRA_JAVA_OPTS="-Xms1G -Xmx8G"
 ENV CORS_ENABLED=$CORS_ENABLED
 ENV CORS_ALLOWED_ORIGINS=$CORS_ALLOWED_ORIGINS
 ENV CORS_ALLOWED_METHODS=$CORS_ALLOWED_METHODS
@@ -56,7 +56,7 @@ RUN apt purge -y  \
 
 FROM tomcat as download
 
-ARG GS_VERSION=2.25.1
+ARG GS_VERSION=2.26.2
 ARG GS_BUILD=release
 ARG WAR_ZIP_URL=https://downloads.sourceforge.net/project/geoserver/GeoServer/${GS_VERSION}/geoserver-${GS_VERSION}-war.zip
 ENV GEOSERVER_VERSION=$GS_VERSION
@@ -72,7 +72,7 @@ RUN echo "Downloading GeoServer ${GS_VERSION} ${GS_BUILD}" \
 
 FROM tomcat as install
 
-ARG GS_VERSION=2.25.1
+ARG GS_VERSION=2.26.2
 ARG GS_BUILD=release
 ARG STABLE_PLUGIN_URL=https://downloads.sourceforge.net/project/geoserver/GeoServer/${GS_VERSION}/extensions
 ARG COMMUNITY_PLUGIN_URL=''
