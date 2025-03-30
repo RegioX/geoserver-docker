@@ -172,13 +172,13 @@ ARG STABLE_PLUGIN_URL=https://downloads.sourceforge.net/project/geoserver/GeoSer
 ARG WAR_ZIP_URL=https://downloads.sourceforge.net/project/geoserver/GeoServer/${GS_VERSION}/geoserver-${GS_VERSION}-war.zip
 
 # Environment variables
-ENV ADDITIONAL_FONTS_DIR=/opt/additional_fonts/
-ENV ADDITIONAL_LIBS_DIR=/opt/additional_libs/
+ENV ADDITIONAL_FONTS_DIR=/home/additional_fonts/
+ENV ADDITIONAL_LIBS_DIR=/home/additional_libs/
 ENV CATALINA_HOME=$CATALINA_HOME
 ENV COMMUNITY_EXTENSIONS='cog-azure,cog-http,backup-restore'
 ENV COMMUNITY_PLUGIN_URL=$COMMUNITY_PLUGIN_URL
-ENV CONFIG_DIR=/opt/config
-ENV CONFIG_OVERRIDES_DIR=/opt/config_overrides
+ENV CONFIG_DIR=/home/config
+ENV CONFIG_OVERRIDES_DIR=/home/config_overrides
 ENV CORS_ALLOWED_HEADERS=$CORS_ALLOWED_HEADERS
 ENV CORS_ALLOWED_METHODS=$CORS_ALLOWED_METHODS
 ENV CORS_ALLOWED_ORIGINS=$CORS_ALLOWED_ORIGINS
@@ -186,7 +186,7 @@ ENV CORS_ALLOW_CREDENTIALS=$CORS_ALLOW_CREDENTIALS
 ENV CORS_ENABLED=$CORS_ENABLED
 ENV EXTRA_JAVA_OPTS="-Xms1g -Xmx6g -XX:+UseG1GC"
 ENV GEOSERVER_BUILD=$GS_BUILD
-ENV GEOSERVER_DATA_DIR=/opt/geoserver_data/
+ENV GEOSERVER_DATA_DIR=/home/geoserver_data/
 ENV GEOSERVER_LIB_DIR=$CATALINA_HOME/webapps/geoserver/WEB-INF/lib/
 ENV SET_GEOSERVER_REQUIRE_FILE=true
 ENV GEOSERVER_VERSION=$GS_VERSION
@@ -198,7 +198,7 @@ ENV ROOT_WEBAPP_REDIRECT=false
 ENV RUN_UNPRIVILEGED=true
 ENV RUN_WITH_USER_UID=999
 ENV RUN_WITH_USER_GID=999
-ENV CHANGE_OWNERSHIP_ON_FOLDERS="/opt $GEOSERVER_DATA_DIR"
+ENV CHANGE_OWNERSHIP_ON_FOLDERS="/home $GEOSERVER_DATA_DIR"
 ENV SKIP_DEMO_DATA=true
 ENV STABLE_EXTENSIONS='gdal'
 ENV STABLE_PLUGIN_URL=$STABLE_PLUGIN_URL
@@ -206,7 +206,7 @@ ENV WAR_ZIP_URL=$WAR_ZIP_URL
 ENV WEBAPP_CONTEXT=geoserver
 
 ENV HTTPS_ENABLED=true
-ENV HTTPS_KEYSTORE_FILE=/opt/geoserver.jks
+ENV HTTPS_KEYSTORE_FILE=/home/geoserver.jks
 ENV HTTPS_KEYSTORE_PASSWORD=geoserver
 ENV HTTPS_KEY_ALIAS=geoserver
 
@@ -294,7 +294,7 @@ COPY $ADDITIONAL_FONTS_PATH /usr/share/fonts/truetype/
 
 # Add default configs
 COPY config $CONFIG_DIR
-COPY keystore/geoserver.jks /opt/geoserver.jks
+COPY keystore/geoserver.jks /home/geoserver.jks
 
 # Apply CIS Apache tomcat recommendations regarding server information
 # * Alter the advertised server.info String (2.1 - 2.3)
@@ -307,7 +307,7 @@ RUN cd $CATALINA_HOME/lib \
     && rm -rf org/apache/catalina/util/ServerInfo.properties
 
 # copy scripts
-COPY *.sh /opt/
+COPY *.sh /home/
 
 # CIS Docker benchmark: Remove setuid and setgid permissions in the images to prevent privilege escalation attacks within containers.
 RUN find / -perm /6000 -type f -exec chmod a-s {} \; || true
@@ -325,11 +325,11 @@ RUN apt purge -y  \
 # GeoServer user => restrict access to $CATALINA_HOME and GeoServer directories
 # See also CIS Docker benchmark and docker best practices
 
-RUN chmod +x /opt/*.sh && sed -i 's/\r$//' /opt/startup.sh
+RUN chmod +x /home/*.sh && sed -i 's/\r$//' /home/startup.sh
 
-ENTRYPOINT ["bash", "/opt/startup.sh"]
+ENTRYPOINT ["bash", "/home/startup.sh"]
 
-WORKDIR /opt
+WORKDIR /home
 
 EXPOSE 8080
 

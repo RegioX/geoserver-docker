@@ -81,7 +81,7 @@ else
 fi
 
 ## install GeoServer extensions before starting the tomcat
-/opt/install-extensions.sh
+/home/install-extensions.sh
 
 # copy additional geoserver libs before starting the tomcat
 # we also count whether at least one file with the extensions exists
@@ -190,7 +190,7 @@ if [ ! "${ENABLE_DEFAULT_SHUTDOWN}" = "true" ]; then
 fi
 
 if [ -n "$GEOSERVER_ADMIN_PASSWORD" ] && [ -n "$GEOSERVER_ADMIN_USER" ]; then
-    /bin/sh /opt/update_credentials.sh
+    /bin/sh /home/update_credentials.sh
 fi
 
 # Run as non-privileged user
