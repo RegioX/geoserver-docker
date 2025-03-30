@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy container app to Azure Web App - regiox(staging)
+name: Build and deploy container app to Azure Web App - geoserver
 
 on:
   push:
@@ -11,41 +11,42 @@ on:
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
-
-    - name: Log in to registry
-      uses: docker/login-action@v2
-      with:
-        registry: https://regiox.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_3af1ae6fe0504d27a1b1c2e34fd863e6 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_6ecdca5b457941e1a427eff88066f652 }}
-
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: regiox.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3af1ae6fe0504d27a1b1c2e34fd863e6 }}/regiox/rx/geoserver-docker:${{ github.sha }}
-        file: ./Dockerfile
-
-  deploy:
     runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'staging'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'regiox'
-        slot-name: 'staging'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ef4cc273dbba451fa2dbf196068110f1 }}
-        images: 'regiox.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3af1ae6fe0504d27a1b1c2e34fd863e6 }}/regiox/rx/geoserver-docker:${{ github.sha }}'
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to container registry
+        uses: docker/login-action@v2
+        with:
+          registry: https://regiox.azurecr.io/
+          username: ${{ secrets.AzureAppService_ContainerUsername_c38677abb1ed4c99854399358e8c2ebd }}
+          password: ${{ secrets.AzureAppService_ContainerPassword_e0c902545e8a45fba6474ec571274211 }}
+
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: regiox.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_c38677abb1ed4c99854399358e8c2ebd }}/regiox/rx/geoserver-docker:${{ github.sha }}
+          file: ./Dockerfile
+
+    deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      environment:
+        name: "staging"
+        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+      steps:
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: "geoserver"
+            slot-name: "staging"
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile_34d54cb30d844cfd928c12cf470f4685 }}
+            images: "regiox.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_c38677abb1ed4c99854399358e8c2ebd }}/regiox/rx/geoserver-docker:${{ github.sha }}"
