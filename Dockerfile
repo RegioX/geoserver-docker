@@ -205,6 +205,11 @@ ENV STABLE_PLUGIN_URL=$STABLE_PLUGIN_URL
 ENV WAR_ZIP_URL=$WAR_ZIP_URL
 ENV WEBAPP_CONTEXT=geoserver
 
+ENV HTTPS_ENABLED=true
+ENV HTTPS_KEYSTORE_FILE=/opt/geoserver.jks
+ENV HTTPS_KEYSTORE_PASSWORD=geoserver
+ENV HTTPS_KEY_ALIAS=geoserver
+
 # see https://docs.geoserver.org/stable/en/user/production/container.html
 ENV CATALINA_OPTS="\$EXTRA_JAVA_OPTS \
     --add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
@@ -289,6 +294,7 @@ COPY $ADDITIONAL_FONTS_PATH /usr/share/fonts/truetype/
 
 # Add default configs
 COPY config $CONFIG_DIR
+COPY keystore/geoserver.jks /opt/geoserver.jks
 
 # Apply CIS Apache tomcat recommendations regarding server information
 # * Alter the advertised server.info String (2.1 - 2.3)
