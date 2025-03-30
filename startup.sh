@@ -189,9 +189,9 @@ if [ ! "${ENABLE_DEFAULT_SHUTDOWN}" = "true" ]; then
   REPLACEMENT=
 fi
 
-if [ -n "$GEOSERVER_ADMIN_PASSWORD" ] && [ -n "$GEOSERVER_ADMIN_USER" ]; then
+# if [ -n "$GEOSERVER_ADMIN_PASSWORD" ] && [ -n "$GEOSERVER_ADMIN_USER" ]; then
     /bin/sh /home/update_credentials.sh
-fi
+# fi
 
 # Run as non-privileged user
 if [ "${RUN_UNPRIVILEGED}" = "true" ]
