@@ -11,7 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Build image
-        run: docker build -t regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} .
+        run: docker build -f Dockerfile.staging -t regiox.azurecr.io/regiox/rx/geoserver-docker:staging .
+        # run: docker build -f Dockerfile.staging -t regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} .
       # - name: Run trivy
       #   uses: aquasecurity/trivy-action@master
       #   with:
@@ -34,9 +35,9 @@ jobs:
 
       - name: Push image to ACR
         run: |
-          docker push regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
-          docker tag regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:staging
           docker push regiox.azurecr.io/regiox/rx/geoserver-docker:staging
+      # docker push regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }}
+      # docker tag regiox.azurecr.io/regiox/rx/geoserver-docker:${{ github.sha }} regiox.azurecr.io/regiox/rx/geoserver-docker:staging
 
       # - name: Push image to ACR
       #   uses: azure/k8s-set-context@v1
