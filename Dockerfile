@@ -158,7 +158,7 @@ LABEL vendor="osgeo.org"
 ARG ADDITIONAL_FONTS_PATH=./additional_fonts/
 ARG ADDITIONAL_LIBS_PATH=./additional_libs/
 ARG BUILD_GDAL
-ARG COMMUNITY_PLUGIN_URL=''
+ARG COMMUNITY_PLUGIN_URL='https://build.geoserver.org/geoserver/2.26.x/community-latest/geoserver-2.26-SNAPSHOT'
 ARG CORS_ALLOWED_HEADERS=Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers
 ARG CORS_ALLOWED_METHODS=GET,POST,PUT,DELETE,HEAD,OPTIONS
 ARG CORS_ALLOWED_ORIGINS=*
