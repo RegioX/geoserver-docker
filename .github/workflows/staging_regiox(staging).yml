@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: regiox.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_3af1ae6fe0504d27a1b1c2e34fd863e6 }}/regiox/rx/geoserver-docker:${{ github.sha }}
-        file: ./Dockerfile.staging
+        file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
