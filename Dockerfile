@@ -205,11 +205,6 @@ ENV STABLE_PLUGIN_URL=$STABLE_PLUGIN_URL
 ENV WAR_ZIP_URL=$WAR_ZIP_URL
 ENV WEBAPP_CONTEXT=geoserver
 
-ENV HTTPS_ENABLED=true
-ENV HTTPS_KEYSTORE_FILE=/home/geoserver.jks
-ENV HTTPS_KEYSTORE_PASSWORD=geoserver
-ENV HTTPS_KEY_ALIAS=geoserver
-
 # see https://docs.geoserver.org/stable/en/user/production/container.html
 ENV CATALINA_OPTS="\$EXTRA_JAVA_OPTS \
     --add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
