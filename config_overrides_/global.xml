@@ -22,7 +22,7 @@
         <showCreatedTimeColumnsInAdminList>false</showCreatedTimeColumnsInAdminList>
         <showModifiedTimeColumnsInAdminList>false</showModifiedTimeColumnsInAdminList>
         <useHeadersProxyURL>true</useHeadersProxyURL>
-        <proxyBaseUrl>https://geoserver.regiox.no/geoserver</proxyBaseUrl>
+        <proxyBaseUrl>https://gs.regiox.no/geoserver</proxyBaseUrl>
     </settings>
     <jai>
         <allowInterpolation>false</allowInterpolation>
