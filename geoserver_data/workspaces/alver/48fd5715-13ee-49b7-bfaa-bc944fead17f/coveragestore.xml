@@ -1,0 +1,22 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-1fad6837:195ec49f7e4:-7ff0</id>
+  <name>48fd5715-13ee-49b7-bfaa-bc944fead17f</name>
+  <description>Kleivdal-Storevatnet 02.09.2022</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-3a1da94:195ec3a7c5e:-7fe4</id>
+  </workspace>
+  <metadata>
+    <entry key="CogSettings.Key">
+      <cogSettings>
+        <useCachingStream>false</useCachingStream>
+        <rangeReaderSettings>HTTP</rangeReaderSettings>
+      </cogSettings>
+    </entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2025-03-31 13:07:08.662 UTC</dateCreated>
+  <disableOnConnFailure>false</disableOnConnFailure>
+  <url>cog://https://regioxstorage.blob.core.windows.net/mapserver-temp/alver/3144b78f7d5a2aca016a5b5cb1cc940d?sv=2020-02-10&amp;st=2024-06-04T00%3A17%3A40Z&amp;se=2035-12-31T01%3A17%3A00Z&amp;sr=d&amp;sp=rl&amp;sig=Jajru6rp2xyIxFosT42HFVMbVbekhJJ5gaIlZi95Vzs%3D&amp;sdd=1</url>
+</coverageStore>

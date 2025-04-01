@@ -1,0 +1,22 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-1fad6837:195ec49f7e4:-7ff6</id>
+  <name>168ef5ec-59ed-4826-8bb3-fc7acf79a3bc</name>
+  <description>Storevatnet nord 02.09.2022</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-3a1da94:195ec3a7c5e:-7fe4</id>
+  </workspace>
+  <metadata>
+    <entry key="CogSettings.Key">
+      <cogSettings>
+        <useCachingStream>false</useCachingStream>
+        <rangeReaderSettings>HTTP</rangeReaderSettings>
+      </cogSettings>
+    </entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2025-03-31 13:06:04.995 UTC</dateCreated>
+  <disableOnConnFailure>false</disableOnConnFailure>
+  <url>cog://https://regioxstorage.blob.core.windows.net/mapserver-temp/alver/1adb4033571d3dda75a3f510c11aba06?sv=2020-02-10&amp;st=2024-06-04T00%3A17%3A40Z&amp;se=2035-12-31T01%3A17%3A00Z&amp;sr=d&amp;sp=rl&amp;sig=Jajru6rp2xyIxFosT42HFVMbVbekhJJ5gaIlZi95Vzs%3D&amp;sdd=1</url>
+</coverageStore>

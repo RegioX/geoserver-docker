@@ -1,0 +1,169 @@
+<coverage>
+  <id>CoverageInfoImpl--4e4298c6:1912d34a7e3:-3df8</id>
+  <name>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</name>
+  <nativeName>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-464b76d4:18fdfda3ea2:-7fe3</id>
+  </namespace>
+  <title>Kollektivknutepunkt og innfartsparkering, Flatøy 12.12.2024</title>
+  <description>Generated from GeoTIFF</description>
+  <keywords>
+    <string>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</string>
+    <string>WCS</string>
+    <string>GeoTIFF</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;ETRS89 / UTM zone 32N&quot;, 
+  GEOGCS[&quot;ETRS89&quot;, 
+    DATUM[&quot;European Terrestrial Reference System 1989&quot;, 
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], 
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 9.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 0.9996], 
+  PARAMETER[&quot;false_easting&quot;, 500000.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;25832&quot;]]</nativeCRS>
+  <srs>EPSG:25832</srs>
+  <nativeBoundingBox>
+    <minx>294500.836380005</minx>
+    <maxx>294748.987630005</maxx>
+    <miny>6716295.561957031</miny>
+    <maxy>6716664.94970703</maxy>
+    <crs class="projected">EPSG:25832</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>5.253928368565792</minx>
+    <maxx>5.25882302752622</maxx>
+    <miny>60.53005303673577</miny>
+    <maxy>60.53348917210975</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>REPROJECT_TO_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="dirName">fe5ff55a-e7ed-43e4-a331-eff9cbcba603_fe5ff55a-e7ed-43e4-a331-eff9cbcba603</entry>
+  </metadata>
+  <store class="coverageStore">
+    <id>CoverageStoreInfoImpl--4e4298c6:1912d34a7e3:-3dfd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <nativeFormat>GeoTIFF</nativeFormat>
+  <grid dimension="2">
+    <range>
+      <low>0 0</low>
+      <high>14815 22053</high>
+    </range>
+    <transform>
+      <scaleX>0.01675</scaleX>
+      <scaleY>-0.01675</scaleY>
+      <shearX>0.0</shearX>
+      <shearY>0.0</shearY>
+      <translateX>294500.844755005</translateX>
+      <translateY>6716664.94133203</translateY>
+    </transform>
+    <crs>EPSG:25832</crs>
+  </grid>
+  <supportedFormats>
+    <string>GEOTIFF</string>
+    <string>GIF</string>
+    <string>PNG</string>
+    <string>JPEG</string>
+    <string>TIFF</string>
+    <string>ArcGrid</string>
+    <string>ImageMosaic</string>
+    <string>GeoPackage (mosaic)</string>
+  </supportedFormats>
+  <interpolationMethods>
+    <string>nearest neighbor</string>
+    <string>bilinear</string>
+    <string>bicubic</string>
+  </interpolationMethods>
+  <defaultInterpolationMethod>nearest neighbor</defaultInterpolationMethod>
+  <dimensions>
+    <coverageDimension>
+      <name>RED_BAND</name>
+      <description>GridSampleDimension[-Infinity,Infinity]</description>
+      <range>
+        <min>-inf</min>
+        <max>inf</max>
+      </range>
+      <unit>W.m-2.Sr-1</unit>
+      <dimensionType>
+        <name>UNSIGNED_8BITS</name>
+      </dimensionType>
+    </coverageDimension>
+    <coverageDimension>
+      <name>GREEN_BAND</name>
+      <description>GridSampleDimension[-Infinity,Infinity]</description>
+      <range>
+        <min>-inf</min>
+        <max>inf</max>
+      </range>
+      <unit>W.m-2.Sr-1</unit>
+      <dimensionType>
+        <name>UNSIGNED_8BITS</name>
+      </dimensionType>
+    </coverageDimension>
+    <coverageDimension>
+      <name>BLUE_BAND</name>
+      <description>GridSampleDimension[-Infinity,Infinity]</description>
+      <range>
+        <min>-inf</min>
+        <max>inf</max>
+      </range>
+      <unit>W.m-2.Sr-1</unit>
+      <dimensionType>
+        <name>UNSIGNED_8BITS</name>
+      </dimensionType>
+    </coverageDimension>
+    <coverageDimension>
+      <name>ALPHA_BAND</name>
+      <description>GridSampleDimension[-Infinity,Infinity]</description>
+      <range>
+        <min>-inf</min>
+        <max>inf</max>
+      </range>
+      <dimensionType>
+        <name>UNSIGNED_8BITS</name>
+      </dimensionType>
+    </coverageDimension>
+  </dimensions>
+  <requestSRS>
+    <string>EPSG:25832</string>
+  </requestSRS>
+  <responseSRS>
+    <string>EPSG:25832</string>
+  </responseSRS>
+  <parameters>
+    <entry>
+      <string>InputTransparentColor</string>
+      <null/>
+    </entry>
+    <entry>
+      <string>SUGGESTED_TILE_SIZE</string>
+      <string>512,512</string>
+    </entry>
+    <entry>
+      <string>Bands</string>
+      <null/>
+    </entry>
+    <entry>
+      <string>RescalePixels</string>
+      <boolean>true</boolean>
+    </entry>
+  </parameters>
+  <nativeCoverageName>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</nativeCoverageName>
+</coverage>

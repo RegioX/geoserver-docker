@@ -1,0 +1,27 @@
+<GeoServerTileLayer>
+  <id>LayerGroupInfoImpl--4e4298c6:1912d34a7e3:-7af4</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>alver:Landbruk Sagstad 08.2024</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters/>
+  <gutter>0</gutter>
+  <cacheWarningSkips/>
+</GeoServerTileLayer>

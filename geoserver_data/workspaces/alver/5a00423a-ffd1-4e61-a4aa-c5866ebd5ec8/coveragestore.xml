@@ -1,0 +1,22 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-1fad6837:195ec49f7e4:-7fea</id>
+  <name>5a00423a-ffd1-4e61-a4aa-c5866ebd5ec8</name>
+  <description>Ølvatnet 06.09.2022</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-3a1da94:195ec3a7c5e:-7fe4</id>
+  </workspace>
+  <metadata>
+    <entry key="CogSettings.Key">
+      <cogSettings>
+        <useCachingStream>false</useCachingStream>
+        <rangeReaderSettings>HTTP</rangeReaderSettings>
+      </cogSettings>
+    </entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2025-03-31 13:08:03.653 UTC</dateCreated>
+  <disableOnConnFailure>false</disableOnConnFailure>
+  <url>cog://https://regioxstorage.blob.core.windows.net/mapserver-temp/alver/c3b3bf37b704783096aea5bc9755faae?sv=2020-02-10&amp;st=2024-06-04T00%3A17%3A40Z&amp;se=2035-12-31T01%3A17%3A00Z&amp;sr=d&amp;sp=rl&amp;sig=Jajru6rp2xyIxFosT42HFVMbVbekhJJ5gaIlZi95Vzs%3D&amp;sdd=1</url>
+</coverageStore>

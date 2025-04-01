@@ -1,0 +1,16 @@
+<layer>
+  <name>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</name>
+  <id>LayerInfoImpl--4e4298c6:1912d34a7e3:-3df7</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-464b76d4:18fdfda3ea2:-7ffd</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--4e4298c6:1912d34a7e3:-3df8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2024-12-13 08:09:48.382 UTC</dateCreated>
+</layer>

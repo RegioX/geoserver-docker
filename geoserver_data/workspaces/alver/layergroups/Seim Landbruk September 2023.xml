@@ -1,0 +1,35 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl-1fad6837:195ec49f7e4:-7fa8</id>
+  <name>Seim Landbruk September 2023</name>
+  <mode>SINGLE</mode>
+  <title>Seim Landbruk Mosaikk 09.2023</title>
+  <workspace>
+    <id>WorkspaceInfoImpl-3a1da94:195ec3a7c5e:-7fe4</id>
+  </workspace>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7fc1</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7fc7</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>294918.22052</minx>
+    <maxx>297481.0284</maxx>
+    <miny>6724226.15521</miny>
+    <maxy>6727783.48584</maxy>
+    <crs class="projected">EPSG:25832</crs>
+  </bounds>
+  <dateCreated>2025-03-31 13:22:14.742 UTC</dateCreated>
+</layerGroup>

@@ -1,0 +1,31 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--4e4298c6:1912d34a7e3:-3ec2</id>
+  <name>Seim Landbruk September 2023</name>
+  <mode>SINGLE</mode>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--4e4298c6:1912d34a7e3:-3ec5</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4e4298c6:1912d34a7e3:-3eca</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-464b76d4:18fdfda3ea2:-7ffd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-464b76d4:18fdfda3ea2:-7ffd</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>294918.22052</minx>
+    <maxx>297481.0284</maxx>
+    <miny>6724226.15521</miny>
+    <maxy>6727783.48584</maxy>
+    <crs class="projected">EPSG:25832</crs>
+  </bounds>
+  <dateCreated>2024-12-12 09:35:38.474 UTC</dateCreated>
+</layerGroup>

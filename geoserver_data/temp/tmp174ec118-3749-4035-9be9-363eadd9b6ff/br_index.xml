@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Index>
+  <Workspace>
+    <Name>alver</Name>
+    <Store type="CoverageStoreInfo">
+      <Name>0b2d363a-2fb8-4117-b3bd-f8359def6071</Name>
+      <Layer type="RASTER">
+        <Name>0b2d363a-2fb8-4117-b3bd-f8359def6071</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>0f45785d-df43-4bb2-85ff-f6c789d9b9b0</Name>
+      <Layer type="RASTER">
+        <Name>0f45785d-df43-4bb2-85ff-f6c789d9b9b0</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>168ef5ec-59ed-4826-8bb3-fc7acf79a3bc</Name>
+      <Layer type="RASTER">
+        <Name>1adb4033571d3dda75a3f510c11aba06</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>36eaab93-0cd9-479f-b1e7-bff2be9ef41a</Name>
+      <Layer type="RASTER">
+        <Name>36eaab93-0cd9-479f-b1e7-bff2be9ef41a</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>3f088121-8cc3-4add-a773-871a80300a62</Name>
+      <Layer type="RASTER">
+        <Name>3f088121-8cc3-4add-a773-871a80300a62</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>48fd5715-13ee-49b7-bfaa-bc944fead17f</Name>
+      <Layer type="RASTER">
+        <Name>3144b78f7d5a2aca016a5b5cb1cc940d</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>59056f8b-2df5-4a9b-84a1-3b394847c2b2</Name>
+      <Layer type="RASTER">
+        <Name>59056f8b-2df5-4a9b-84a1-3b394847c2b2</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>5a00423a-ffd1-4e61-a4aa-c5866ebd5ec8</Name>
+      <Layer type="RASTER">
+        <Name>c3b3bf37b704783096aea5bc9755faae</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>61b9cb12-5862-4714-940f-8a0640f48c9b</Name>
+      <Layer type="RASTER">
+        <Name>61b9cb12-5862-4714-940f-8a0640f48c9b</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>7308623e-bf82-46cb-8965-d56b6ea4ec8c</Name>
+      <Layer type="RASTER">
+        <Name>7308623e-bf82-46cb-8965-d56b6ea4ec8c</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>7618c141-533e-4bd2-993d-68f454622438</Name>
+      <Layer type="RASTER">
+        <Name>a3372a952a717e3a58cb7bbd4046edbd</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>7bc186de-d518-4f46-8e7f-2e729ce28bb9</Name>
+      <Layer type="RASTER">
+        <Name>7bc186de-d518-4f46-8e7f-2e729ce28bb9</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>7eea9ace-97b1-49dd-91c0-3158424f44a5</Name>
+      <Layer type="RASTER">
+        <Name>7eea9ace-97b1-49dd-91c0-3158424f44a5</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>841f97a7-062a-420a-a7c4-2b4bfffd2d93</Name>
+      <Layer type="RASTER">
+        <Name>841f97a7-062a-420a-a7c4-2b4bfffd2d93</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>8d7f35f1-9dbc-4cee-89b8-2b8b3eb1b230</Name>
+      <Layer type="RASTER">
+        <Name>8d7f35f1-9dbc-4cee-89b8-2b8b3eb1b230</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>908ff839-a944-4283-ba46-201d19f9e8f9</Name>
+      <Layer type="RASTER">
+        <Name>908ff839-a944-4283-ba46-201d19f9e8f9</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>c9d68c46-96ef-402e-be08-c58651ccfeb5</Name>
+      <Layer type="RASTER">
+        <Name>c9d68c46-96ef-402e-be08-c58651ccfeb5</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>ca4129b4-8654-4569-b29e-125873a74dc5</Name>
+      <Layer type="RASTER">
+        <Name>ca4129b4-8654-4569-b29e-125873a74dc5</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>dbcc7767-92ae-47d3-8f17-7ac47ed90f41</Name>
+      <Layer type="RASTER">
+        <Name>dbcc7767-92ae-47d3-8f17-7ac47ed90f41</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>e5675eb2-3e93-45ba-abc2-a20dfacce1db</Name>
+      <Layer type="RASTER">
+        <Name>7d3011c734335db347569c717ede3bb7</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>f629bc7e-e629-46b9-b4ee-737d1a00a2cf</Name>
+      <Layer type="RASTER">
+        <Name>f629bc7e-e629-46b9-b4ee-737d1a00a2cf</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>fa564846-1ee5-4966-afe2-683d1163a170</Name>
+      <Layer type="RASTER">
+        <Name>7e6723ebc8853bfe1f291418e9edb165</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</Name>
+      <Layer type="RASTER">
+        <Name>fe5ff55a-e7ed-43e4-a331-eff9cbcba603</Name>
+      </Layer>
+    </Store>
+    <Store type="CoverageStoreInfo">
+      <Name>ff4d3546-3b3d-4372-82f8-81fda47484bb</Name>
+      <Layer type="RASTER">
+        <Name>ff4d3546-3b3d-4372-82f8-81fda47484bb</Name>
+      </Layer>
+    </Store>
+  </Workspace>
+  <Filters>
+    <Filter type="WorkspaceInfo">
+      <ECQL>(name = 'alver' OR "workspace.name" = 'alver') OR "resource.store.workspace.name" = 'alver'</ECQL>
+    </Filter>
+  </Filters>
+</Index>

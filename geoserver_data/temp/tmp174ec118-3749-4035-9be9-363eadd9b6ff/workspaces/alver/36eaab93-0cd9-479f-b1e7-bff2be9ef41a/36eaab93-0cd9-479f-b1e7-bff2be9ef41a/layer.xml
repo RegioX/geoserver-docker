@@ -1,0 +1,17 @@
+<layer>
+  <name>36eaab93-0cd9-479f-b1e7-bff2be9ef41a</name>
+  <id>LayerInfoImpl--4e4298c6:1912d34a7e3:-7afc</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-464b76d4:18fdfda3ea2:-7ffd</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--4e4298c6:1912d34a7e3:-7afd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2024-08-26 11:12:40.137 UTC</dateCreated>
+  <dateModified>2024-08-26 11:21:48.791 UTC</dateModified>
+</layer>

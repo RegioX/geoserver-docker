@@ -1,0 +1,47 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl-1fad6837:195ec49f7e4:-7fa9</id>
+  <name>Landbruk Sagstad 08.2024</name>
+  <mode>SINGLE</mode>
+  <title>Landbruk Sagstad 08.2024</title>
+  <workspace>
+    <id>WorkspaceInfoImpl-3a1da94:195ec3a7c5e:-7fe4</id>
+  </workspace>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7fb8</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7ff1</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7fd9</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-1fad6837:195ec49f7e4:-7fd3</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-3a1da94:195ec3a7c5e:-7ffd</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>290715.63187</minx>
+    <maxx>293462.53852</maxx>
+    <miny>6714694.310950001</miny>
+    <maxy>6717289.28781</maxy>
+    <crs class="projected">EPSG:25832</crs>
+  </bounds>
+  <dateCreated>2025-03-31 13:21:48.769 UTC</dateCreated>
+</layerGroup>
