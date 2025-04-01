@@ -33,11 +33,6 @@ services:
     volumes:
       - ./geoserver_data:/opt/geoserver_data/:Z
       - ./additional_libs:/opt/additional_libs:Z
-    healthcheck:
-      test: curl --fail "http://localhost:8080/geoserver/web/wicket/resource/org.geoserver.web.GeoServerBasePage/img/logo.png" || exit 1
-      interval: 1m
-      retries: 3
-      timeout: 20s
 
   certbot:
     image: certbot/certbot:latest
