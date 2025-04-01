@@ -18,8 +18,6 @@ services:
         - CORS_ENABLED=true
         - CORS_ALLOWED_METHODS=GET,POST,PUT,HEAD,OPTIONS
     restart: always
-    ports:
-      - "80:8080"
     environment:
       - EXTRA_JAVA_OPTS=-Xms1g -Xmx7g -XX:+UseG1GC
       - INSTALL_EXTENSIONS=true
