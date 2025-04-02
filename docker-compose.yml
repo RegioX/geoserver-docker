@@ -1,16 +1,4 @@
 services:
-  ofelia:
-    image: mcuadros/ofelia:latest
-    container_name: ofelia
-    command: daemon --docker
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    labels:
-      ofelia.job-run.letsencrypt-renew.schedule: "@every 30s"
-      ofelia.job-run.letsencrypt-renew.container: "certbot"
-      # ofelia.job-run.letsencrypt-renew.volume: [ "/home/geoserver_admin/geoserver-docker/certbot/www:/var/www/certbot", "/home/geoserver_admin/geoserver-docker/certbot/conf:/etc/letsencrypt" ]
-      ofelia.job-run.letsencrypt-renew.command: "renew --dry-run"
-
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -43,7 +31,7 @@ services:
       - CORS_ALLOWED_HEADERS=*
       - CORS_ALLOWED_METHODS=GET,POST,PUT,HEAD,OPTIONS
       - GEOSERVER_CSRF_WHITELIST=regiox.no
-      - PROXY_BASE_URL=https://gs.regiox.no/geoserver
+      - PROXY_BASE_URL=https://geoserver.regiox.no/geoserver
     volumes:
       - ./geoserver_data:/opt/geoserver_data/:Z
       - ./additional_libs:/opt/additional_libs:Z
