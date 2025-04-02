@@ -51,5 +51,6 @@ services:
       - ./certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
     labels:
+      ofelia.enabled: "true"
       ofelia.job-run.letsencrypt-renew.schedule: "@every 30s"
       ofelia.job-run.letsencrypt-renew.command: "certonly --webroot --webroot-path /var/www/certbot/ --email admin@regiox.no --agree-tos --no-eff-email --dry-run -d gs.regiox.no"
