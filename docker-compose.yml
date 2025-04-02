@@ -5,7 +5,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:
-      ofelia.job-run.letsencrypt-renew.schedule: "@every 3s0s"
+      ofelia.job-run.letsencrypt-renew.schedule: "@every 30s"
       ofelia.job-run.letsencrypt-renew.image: "certbot/certbot:latest"
       ofelia.job-run.letsencrypt-renew.volume: "/home/geoserver_admin/geoserver-docker/certbot/www:/var/www/certbot"
       # ofelia.job-run.letsencrypt-renew.volume: "./certbot/www:/var/www/certbot"
