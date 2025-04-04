@@ -2,26 +2,27 @@
 
 This Dockerfile can be used to create images for all geoserver versions since 2.5.
 
-* Debian based Linux
-* OpenJDK 11
-* Tomcat 9
-* GeoServer
-  * Support of custom fonts (e.g. for SLD styling)
-  * CORS support
-  * Support extensions
-  * Support additional libraries
-  * Support for PostgreSQL JNDI 
-  * Support for HTTPS
+- Debian based Linux
+- OpenJDK 11
+- Tomcat 9
+- GeoServer
+  - Support of custom fonts (e.g. for SLD styling)
+  - CORS support
+  - Support extensions
+  - Support additional libraries
+  - Support for PostgreSQL JNDI
+  - Support for HTTPS
 
 This README.md file covers use of official docker image, additional [build](BUILD.md) and [release](RELEASE.md) instructions are available.
 
 ## How to run official release?
 
-To pull an official image use ``docker.osgeo.org/geoserver:{{VERSION}}``, e.g.:
+To pull an official image use `docker.osgeo.org/geoserver:{{VERSION}}`, e.g.:
 
 ```shell
 docker pull docker.osgeo.org/geoserver:2.26.2
 ```
+
 All the images can be found at: [https://repo.osgeo.org](https://repo.osgeo.org/#browse/browse:geoserver-docker:v2/geoserver/tags) and the latest stable and maintenance version numbers can be obtained from [https://geoserver.org/download/](https://geoserver.org/download/)
 
 Afterwards you can run the pulled image locally with:
@@ -39,7 +40,7 @@ docker run -d -p 80:8080 docker.osgeo.org/geoserver:2.26.2
 Check <http://localhost/geoserver> to see the geoserver page,
 and login with geoserver default `admin:geoserver` credentials.
 
-**IMPORTANT NOTE:** Please change the default ``geoserver`` and ``master`` passwords.
+**IMPORTANT NOTE:** Please change the default `geoserver` and `master` passwords.
 
 For more information see the user-guide [docker installation instructions](https://docs.geoserver.org/latest/en/user/installation/docker.html).
 
@@ -58,7 +59,7 @@ using the same data directory.
 
 ## How to start a GeoServer without sample data?
 
-This image populates ``/opt/geoserver_data/`` with demo data by default. For production scenarios this is typically not desired.
+This image populates `/opt/geoserver_data/` with demo data by default. For production scenarios this is typically not desired.
 
 The environment variable `SKIP_DEMO_DATA` can be set to `true` to create an empty data directory.
 
@@ -75,16 +76,16 @@ The environment variable `ROOT_WEBAPP_REDIRECT` can be set to `true` to issue a 
 
 ## How to download and install additional extensions on startup?
 
-The ``startup.sh`` script allows some customization on startup:
+The `startup.sh` script allows some customization on startup:
 
-* ``INSTALL_EXTENSIONS`` to ``true`` to download and install extensions
-* ``STABLE_EXTENSIONS`` list of extensions to download and install
-* ``CORS_ENABLED`` to ``true`` to enable CORS support. The following environment variables can be used to customize the CORS configuration.
-  * ``CORS_ALLOWED_ORIGINS`` (default ``*``)
-  * ``CORS_ALLOWED_METHODS`` (default ``GET,POST,PUT,DELETE,HEAD,OPTIONS``)
-  * ``CORS_ALLOWED_HEADERS`` (default ``*``)
-  * ``CORS_ALLOW_CREDENTIALS`` (default ``false``) **Setting this to ``true`` will only have the desired effect if ``CORS_ALLOWED_ORIGINS`` defines explicit origins (not ``*``)**
-* ``PROXY_BASE_URL`` to the base URL of the GeoServer web app if GeoServer is behind a proxy. Example: ``https://example.com/geoserver``.
+- `INSTALL_EXTENSIONS` to `true` to download and install extensions
+- `STABLE_EXTENSIONS` list of extensions to download and install
+- `CORS_ENABLED` to `true` to enable CORS support. The following environment variables can be used to customize the CORS configuration.
+  - `CORS_ALLOWED_ORIGINS` (default `*`)
+  - `CORS_ALLOWED_METHODS` (default `GET,POST,PUT,DELETE,HEAD,OPTIONS`)
+  - `CORS_ALLOWED_HEADERS` (default `*`)
+  - `CORS_ALLOW_CREDENTIALS` (default `false`) **Setting this to `true` will only have the desired effect if `CORS_ALLOWED_ORIGINS` defines explicit origins (not `*`)**
+- `PROXY_BASE_URL` to the base URL of the GeoServer web app if GeoServer is behind a proxy. Example: `https://example.com/geoserver`.
 
 The CORS variables customize tomcat's `web.xml` file. If you need more customization,
 you can provide your own customized `web.xml` file to tomcat by mounting it into the container
@@ -135,18 +136,17 @@ docker run -it -p 80:8080 \
 
 **Note:** Do not change the target value!
 
-
 ## How to enable a PostgreSQL JNDI resource?
 
 To enable a PostgreSQL JNDI resource, provide the following environment variables:
 
-* ``POSTGRES_JNDI_ENABLED`` to ``true``
-* ``POSTGRES_HOST``
-* ``POSTGRES_PORT`` (optional; defaults to 5432)
-* ``POSTGRES_DB``
-* ``POSTGRES_USERNAME``
-* ``POSTGRES_PASSWORD``
-* ``POSTGRES_JNDI_RESOURCE_NAME`` (optional; defaults to ``jdbc/postgres``)
+- `POSTGRES_JNDI_ENABLED` to `true`
+- `POSTGRES_HOST`
+- `POSTGRES_PORT` (optional; defaults to 5432)
+- `POSTGRES_DB`
+- `POSTGRES_USERNAME`
+- `POSTGRES_PASSWORD`
+- `POSTGRES_JNDI_RESOURCE_NAME` (optional; defaults to `jdbc/postgres`)
 
 In geoserver, you can then reference this JNDI resource using the name `java:comp/env/jdbc/postgres` (if using default).
 
@@ -154,8 +154,8 @@ In geoserver, you can then reference this JNDI resource using the name `java:com
 
 This image provides default (tomcat) configurations that are located in the `./config/` subdir.
 
-* `context.xml` (see/compare JNDI feature from above)
-* `server.xml` (security hardened version by default)
+- `context.xml` (see/compare JNDI feature from above)
+- `server.xml` (security hardened version by default)
 
 In case you want to fully overwrite such a config file, you can do so by mounting it to the `/opt/config_overrides/` directory of a container.
 The `startup.sh` script will then copy (and overwrite) these files to the catalina conf directory before starting tomcat.
@@ -170,25 +170,26 @@ docker run -it -p 80:8080 \
 
 ## How to enable HTTPS?
 
-To enable HTTPS, mount a JKS file to the container (ex. `/opt/keystore.jks`) and provide the following environment 
+To enable HTTPS, mount a JKS file to the container (ex. `/opt/keystore.jks`) and provide the following environment
 variables:
 
-* ``HTTPS_ENABLED`` to `true`
-* ``HTTPS_KEYSTORE_FILE`` (defaults to `/opt/keystore.jks`)
-* ``HTTPS_KEYSTORE_PASSWORD`` (defaults to `changeit`)
-* ``HTTPS_KEY_ALIAS`` (defaults to `server`)
+- `HTTPS_ENABLED` to `true`
+- `HTTPS_KEYSTORE_FILE` (defaults to `/opt/keystore.jks`)
+- `HTTPS_KEYSTORE_PASSWORD` (defaults to `changeit`)
+- `HTTPS_KEY_ALIAS` (defaults to `server`)
 
 ## How to use the docker-compose demo?
 
-The ``docker-compose-demo.yml`` to build with your own data directory and extensions.
+The `docker-compose-demo.yml` to build with your own data directory and extensions.
 
-Stage geoserver data directory contents into ``geoserver_data``, and any extensions into ``additional_libs`` folder.
+Stage geoserver data directory contents into `geoserver_data`, and any extensions into `additional_libs` folder.
 
-Run ``docker-compose``:
+Run `docker-compose`:
 
 ```shell
 docker-compose -f docker-compose-demo.yml up --build
 ```
+
 ## Environment Variables
 
 Following is the list of the all the environment variables that can be passed down to the geoserver docker image, you can check the default values for an image using `docker inspect [IMAGE_NAME]`
@@ -227,7 +228,7 @@ The following values cannot really be safely changed (as they are used to downlo
 
 ### How to watch geoserver.log from host?
 
-To watch ``geoserver.log`` of a running container:
+To watch `geoserver.log` of a running container:
 
 ```shell
 docker exec -it {CONTAINER_ID} tail -f /opt/geoserver_data/logs/geoserver.log
